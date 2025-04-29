@@ -23,15 +23,15 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
+      className=" flex flex-col gap-10 justify-center items-start xl:h-screen text-center pb-32 pt-60 xl:pt-0 xl:pb-32 transition-all"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className=" flex flex-col gap-10 justify-center items-center h-screen"
     >
       <motion.h2
         variants={itemVariants}
-        className="text-4xl font-bold mb-4"
+        className="text-4xl font-bold pb-4"
       >
         Contact <span className="text-primary">Me</span>
       </motion.h2>
@@ -43,7 +43,7 @@ const Contact = () => {
           className="flex w-full gap-5"
         >
           <motion.div
-            className="flex flex-col gap-2 items-start mb-4 w-full"
+            className="flex flex-col gap-2 items-start pb-4 w-full"
           >
             <motion.label
               variants={itemVariants}
@@ -67,7 +67,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             variants={itemVariants}
-            className="flex flex-col gap-2 items-start mb-4 w-full"
+            className="flex flex-col gap-2 items-start pb-4 w-full"
           >
             <motion.label
               variants={itemVariants}
@@ -92,7 +92,7 @@ const Contact = () => {
         </motion.section>
         <motion.section
           variants={itemVariants}
-          className="flex flex-col gap-2 items-start mb-4 w-full"
+          className="flex flex-col gap-2 items-start pb-4 w-full"
         >
           <motion.label
             variants={itemVariants}

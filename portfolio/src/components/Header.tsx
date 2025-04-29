@@ -22,7 +22,7 @@ const Header = ({ section, setSection }: IHeader) => {
   };
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-16 flex flex-col items-center justify-center">
+    <aside className="fixed left-0 top-0 h-screen w-16 hidden xl:flex flex-col items-center justify-center">
       <LayoutGroup>
         <nav className="flex flex-col items-center space-y-6 relative">
           {navItems.map((item) => {

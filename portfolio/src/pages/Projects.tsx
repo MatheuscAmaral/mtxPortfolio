@@ -24,16 +24,14 @@ const Projects = () => {
     <motion.section
       id="projects"
       variants={containerVariants}
-      className="flex flex-col gap-10 justify-center w-full mt-72"
+      className="flex flex-col gap-10 justify-center w-full pt-72"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
       <div>
-        <motion.h1 className="text-4xl font-bold mb-5" variants={itemVariants}>
-          <span>
+        <motion.h1 className="flex items-center gap-2 text-4xl font-bold mb-5" variants={itemVariants}>
             Feature <p className="text-primary">Projects</p>
-          </span>
         </motion.h1>
         <motion.p className="text-lg mb-5" variants={itemVariants}>
           Here are some projects I've worked on recently.
@@ -41,13 +39,13 @@ const Projects = () => {
       </div>
 
       <motion.div
-        className="grid grid-cols-1 items-center gap-7 justify-center"
+        className="grid grid-rows-1 xl:grid-cols-1 items-center gap-7 justify-center"
         variants={containerVariants}
       >
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="flex gap-10 border rounded-xl p-10 items-center hover:bg-gray-500/20 cursor-pointer"
+            className="flex flex-col xl:flex-row gap-10 border rounded-xl p-10 items-center hover:bg-gray-500/20 cursor-pointer"
             variants={itemVariants}
           >
             <motion.div className="flex flex-col gap-5" variants={itemVariants}>

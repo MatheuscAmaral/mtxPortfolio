@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <motion.section
       id="skills"
-      className=" flex flex-col justify-center items-start h-screen text-center"
+      className=" flex flex-col gap-10 justify-center items-start xl:h-screen text-center pt-96 xl:pt-32 transition-all"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
@@ -44,15 +44,16 @@ const Skills = () => {
         </motion.p>
       </motion.div>
 
-      <motion.div className="grid grid-cols-4 gap-10 mt-10 w-full">
-        {stacks.map((stack, index) => (
+      <motion.div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 h-96 overflow-y-auto lg:overflow-auto w-full">
+        {stacks.map((stack) => (
           <motion.div
-            key={index}
-            className="flex gap-5 items-center border p-3 rounded-md"
+            key={stack.name} 
+            className="flex gap-5 items-center border p-2 rounded-md select-none hover:bg-gray-500/20"
             variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
           >
             <motion.span 
-              className="flex flex-col items-center bg-gray-500/20 p-3 rounded-md"
+              className="flex flex-col items-center bg-gray-500/20 p-2 ml-1 rounded-md"
               variants={itemVariants}
             >
               {stack.icon}
@@ -61,8 +62,8 @@ const Skills = () => {
               className="flex flex-col items-start"
               variants={itemVariants}
             >
-              <motion.h2 className="text-xl font-bold">{stack.name}</motion.h2>
-              <motion.p className="text-gray-500">{stack.description}</motion.p>
+              <motion.h2 className="text-md font-bold">{stack.name}</motion.h2>
+              <motion.p className="text-sm text-gray-500">{stack.description}</motion.p>
             </motion.span>
           </motion.div>
         ))}

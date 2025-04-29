@@ -1,6 +1,7 @@
 import { useTheme } from "./hooks";
 import { useEffect, useState } from "react";
 import { Container, Footer, Header, Scroll } from "./components";
+import { FaBarsStaggered } from "react-icons/fa6";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
@@ -39,13 +40,16 @@ const App = () => {
 
   return (
     <Container>
-      <p className="fixed left-5 top-5 font-semibold text-sm">MATHEUS <span className="text-primary">AMARAL</span></p>
+      <section className="flex justify-between">
+       <p className="fixed left-5 top-5 font-semibold text-sm">MATHEUS <span className="text-primary">AMARAL</span></p>
+       <FaBarsStaggered className="block xl:hidden fixed right-5 top-5 size-5 font-semibold"/>
+      </section>
       <Header section={activeSection} setSection={setActiveSection} />
-        <Home />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Scroll section={activeSection}/>
+      <Home />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Scroll section={activeSection}/>
       <Footer />
     </Container>
   );

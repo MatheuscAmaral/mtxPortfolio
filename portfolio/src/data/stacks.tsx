@@ -10,10 +10,15 @@ import {
   TbBrandReact,
   TbBrandLaravel,
   TbBrandPhp,
-  TbBrandJavascript
+  TbBrandGithub,
+  TbBrandJavascript,
+  TbBrandVercel,
+  TbBrandFramerMotion,
+  TbBrandFirebase,
 } from "react-icons/tb";
 import { BiLogoPostgresql, BiLogoAws } from "react-icons/bi";
-import { SiFastify } from "react-icons/si";
+import { SiExpress, SiFastify } from "react-icons/si";
+import { LiaGit } from "react-icons/lia";
 
 const stacks = [
   {
@@ -72,6 +77,11 @@ const stacks = [
     description: "Framework"
   },
   {
+    icon: <SiExpress className="size-6" />,
+    name: "Express",
+    description: "Framework"
+  },
+  {
     icon: <TbBrandPrisma className="size-6" />,
     name: "Prisma",
     description: "ORM"
@@ -87,6 +97,16 @@ const stacks = [
     description: "Database"
   },
   {
+    icon: <TbBrandFirebase className="size-6" />,
+    name: "Firebase",
+    description: "Database"
+  },
+  {
+    icon: <TbBrandFramerMotion className="size-6" />,
+    name: "Framer Motion",
+    description: "Animation"
+  },
+  {
     icon: <TbBrandDocker className="size-6" />,
     name: "Docker",
     description: "Containerization"
@@ -95,7 +115,22 @@ const stacks = [
     icon: <BiLogoAws className="size-6" />,
     name: "AWS",
     description: "Cloud Services"
-  }
+  },
+  {
+    icon: <LiaGit className="size-6" />,
+    name: "Git",
+    description: "Version Control"
+  },
+  {
+    icon: <TbBrandGithub className="size-6" />,
+    name: "Github",
+    description: "Version Control"
+  },
+  {
+    icon: <TbBrandVercel className="size-6" />,
+    name: "Vercel",
+    description: "Deployment"
+  },
 ];
 
 export default stacks;
