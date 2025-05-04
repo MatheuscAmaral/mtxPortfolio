@@ -10,8 +10,8 @@ const Header = ({ isOpen, setIsOpen, section }: IHeader) => {
     <header
       className={`${
         isOpen &&
-        "h-screen bg-background xl:bg-transparent rounded-none z-50 flex flex-col"
-      } fixed top-0 w-screen left-0 right-0`}
+        "h-screen bg-background xl:bg-transparent rounded-none flex flex-col"
+      } fixed top-0 w-screen left-0 right-0 z-50`}
     >
       <article className="flex justify-between items-center w-full py-5 px-5 bg-background">
         <p className="font-semibold text-sm">
