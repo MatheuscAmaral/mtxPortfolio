@@ -16,25 +16,10 @@ import {
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiFastify } from "react-icons/si";
 
-const projects = [
+export const projects = [
   {
-    title: "RWA Suplementos",
-    description:
-      "This is a team and project management dashboard, with a modern and intuitive interface, which allows you to customize personal information, such as name, photo and function.",
-    image: rwa,
-    technologies: [
-      { icon: <TbBrandReact className="size-6" />, name: "React" },
-      { icon: <TbBrandNodejs className="size-6" />, name: "Node.js" },
-      { icon: <BiLogoPostgresql className="size-6" />, name: "PostgreSQL" },
-      { icon: <SiFastify className="size-6" />, name: "Fastify" },
-      { icon: <TbBrandPrisma className="size-6" />, name: "Prisma" },
-      { icon: <TbBrandTailwind className="size-6" />, name: "Tailwind" },
-    ],
-  },
-  {
-    title: "Luza Destinos",
-    description:
-    "This is a team and project management dashboard, with a modern and intuitive interface, which allows you to customize personal information, such as name, photo and function.",
+    titleKey: "project_luza_destinos_title",
+    descriptionKey: "project_luza_destinos_description",
     image: luza,
     technologies: [
       { icon: <TbBrandReact className="size-6" />, name: "React" },
@@ -46,9 +31,8 @@ const projects = [
     ],
   },
   {
-    title: "Bravos Sports",
-    description:
-    "This is a team and project management dashboard, with a modern and intuitive interface, which allows you to customize personal information, such as name, photo and function.",
+    titleKey: "project_bravos_sports_title",
+    descriptionKey: "project_bravos_sports_description",
     image: bravos,
     technologies: [
       { icon: <TbBrandReact className="size-6" />, name: "React" },
@@ -60,12 +44,24 @@ const projects = [
     ],
   },
   {
-    title: "Admin Ecommerce",
-    description:
-      "This is a team and project management dashboard, with a modern and intuitive interface, which allows you to customize personal information, such as name, photo and function.",
+    titleKey: "project_rwa_suplementos_title",
+    descriptionKey: "project_rwa_suplementos_description",
+    image: rwa,
+    technologies: [
+      { icon: <TbBrandReact className="size-6" />, name: "React" },
+      { icon: <TbBrandNodejs className="size-6" />, name: "Node.js" },
+      { icon: <BiLogoPostgresql className="size-6" />, name: "PostgreSQL" },
+      { icon: <SiFastify className="size-6" />, name: "Fastify" },
+      { icon: <TbBrandPrisma className="size-6" />, name: "Prisma" },
+      { icon: <TbBrandTailwind className="size-6" />, name: "Tailwind" },
+    ],
+  },
+  {
+    titleKey: "project_admin_ecommerce_title",
+    descriptionKey: "project_admin_ecommerce_description",
     image: admin,
     technologies: [
-      { icon: <TbBrandNextjs className="size-6" />, name: "Next" },
+      { icon: <TbBrandNextjs className="size-6" />, name: "Next.js" },
       { icon: <TbBrandNodejs className="size-6" />, name: "Node.js" },
       { icon: <BiLogoPostgresql className="size-6" />, name: "PostgreSQL" },
       { icon: <SiFastify className="size-6" />, name: "Fastify" },

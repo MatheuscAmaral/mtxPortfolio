@@ -1,57 +1,59 @@
 import { useTheme } from "./hooks";
 import { useEffect, useState } from "react";
-import { Container, Footer, Header, Scroll } from "./components";
-import { FaBarsStaggered } from "react-icons/fa6";
+import { Container, Footer, Header, Scroll, Sidebar } from "./components";
+import { handleScroll } from "./utils/functions";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const { theme } = useTheme();
+  const { i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState<string>("home");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const locale = navigator.language || "pt";
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      let currentSection = "home";
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          currentSection = section.id;
-        }
-      });
-
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const langCode = locale.split("-")[0];
+    if (["pt", "en", "es"].includes(langCode)) {
+      i18n.changeLanguage(langCode);
+    } else {
+      i18n.changeLanguage("pt");
+    }
   }, []);
-
 
   useEffect(() => {
     document.body.classList.remove("dark", "light");
     document.body.classList.add(theme === "dark" ? "dark" : "light");
+
+    const onScroll = () => handleScroll(setActiveSection);
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [theme]);
 
   return (
-    <Container>
-      <section className="flex justify-between">
-       <p className="fixed left-5 top-5 font-semibold text-sm">MATHEUS <span className="text-primary">AMARAL</span></p>
-       <FaBarsStaggered className="block xl:hidden fixed right-5 top-5 size-5 font-semibold"/>
-      </section>
-      <Header section={activeSection} setSection={setActiveSection} />
-      <Home />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Scroll section={activeSection}/>
-      <Footer />
-    </Container>
+    <>
+      <Header
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        section={activeSection}
+        setSection={setActiveSection}
+      />
+      <Container>
+        <Sidebar section={activeSection} setSection={setActiveSection} />
+        <Home />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Scroll section={activeSection} />
+        <Footer />
+      </Container>
+    </>
   );
 };
 

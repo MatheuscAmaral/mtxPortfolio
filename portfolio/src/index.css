@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap') format('woff2');
-}
-
 html {
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 button {
@@ -36,8 +38,9 @@ body.dark {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --font-sans: 'Poppins', sans-serif;
   --radius: 0.625rem;
-  --background: rgba(255, 255, 255, 0.934);
+  --background: #FFFFFF;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -109,7 +112,7 @@ body.dark {
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #121212;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --nav-color: rgba(255, 255, 255, 0.87);
@@ -163,8 +166,5 @@ body.dark {
   }
   .scroll-button {
     @apply rounded-full border p-3 hover:bg-secondary fixed bottom-5 right-5 animate-bounce z-50;
-  }
-  header {
-    @apply fixed top-0 left-5 mt-5 rounded-full z-50 px-3 py-1 w-full shadow-lg border border-black/5;
   }
 }

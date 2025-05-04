@@ -20,116 +20,116 @@ import { BiLogoPostgresql, BiLogoAws } from "react-icons/bi";
 import { SiExpress, SiFastify } from "react-icons/si";
 import { LiaGit } from "react-icons/lia";
 
-const stacks = [
+export const stacks = [
   {
     icon: <TbBrandReact className="size-6" />,
-    name: "React",
-    description: "Framework"
+    nameKey: "stack_react_name",
+    descriptionKey: "stack_react_description",
   },
   {
     icon: <TbBrandNextjs className="size-6" />,
-    name: "Next.js",
-    description: "Framework"
+    nameKey: "stack_nextjs_name",
+    descriptionKey: "stack_nextjs_description",
   },
   {
     icon: <TbBrandReact className="size-6" />,
-    name: "React Native",
-    description: "Mobile Framework"
+    nameKey: "stack_react_native_name",
+    descriptionKey: "stack_react_native_description",
   },
   {
     icon: <TbBrandJavascript className="size-6" />,
-    name: "JavaScript",
-    description: "Programming"
+    nameKey: "stack_javascript_name",
+    descriptionKey: "stack_javascript_description",
   },
   {
     icon: <TbBrandTypescript className="size-6" />,
-    name: "TypeScript",
-    description: "Programming"
+    nameKey: "stack_typescript_name",
+    descriptionKey: "stack_typescript_description",
   },
   {
     icon: <TbBrandTailwind className="size-6" />,
-    name: "Tailwind",
-    description: "CSS Framework"
+    nameKey: "stack_tailwind_name",
+    descriptionKey: "stack_tailwind_description",
   },
   {
     icon: <TbBrandNodejs className="size-6" />,
-    name: "Node.js",
-    description: "Runtime"
+    nameKey: "stack_nodejs_name",
+    descriptionKey: "stack_nodejs_description",
   },
   {
     icon: <TbBrandAdonisJs className="size-6" />,
-    name: "AdonisJS",
-    description: "Node Framework"
+    nameKey: "stack_adonisjs_name",
+    descriptionKey: "stack_adonisjs_description",
   },
   {
     icon: <TbBrandLaravel className="size-6" />,
-    name: "Laravel",
-    description: "Framework"
+    nameKey: "stack_laravel_name",
+    descriptionKey: "stack_laravel_description",
   },
   {
     icon: <TbBrandPhp className="size-6" />,
-    name: "PHP",
-    description: "Programming"
+    nameKey: "stack_php_name",
+    descriptionKey: "stack_php_description",
   },
   {
     icon: <SiFastify className="size-6" />,
-    name: "Fastify",
-    description: "Framework"
+    nameKey: "stack_fastify_name",
+    descriptionKey: "stack_fastify_description",
   },
   {
     icon: <SiExpress className="size-6" />,
-    name: "Express",
-    description: "Framework"
+    nameKey: "stack_express_name",
+    descriptionKey: "stack_express_description",
   },
   {
     icon: <TbBrandPrisma className="size-6" />,
-    name: "Prisma",
-    description: "ORM"
+    nameKey: "stack_prisma_name",
+    descriptionKey: "stack_prisma_description",
   },
   {
     icon: <BiLogoPostgresql className="size-6" />,
-    name: "PostgreSQL",
-    description: "Database"
+    nameKey: "stack_postgresql_name",
+    descriptionKey: "stack_postgresql_description",
   },
   {
     icon: <TbBrandMysql className="size-6" />,
-    name: "MySQL",
-    description: "Database"
+    nameKey: "stack_mysql_name",
+    descriptionKey: "stack_mysql_description",
   },
   {
     icon: <TbBrandFirebase className="size-6" />,
-    name: "Firebase",
-    description: "Database"
+    nameKey: "stack_firebase_name",
+    descriptionKey: "stack_firebase_description",
   },
   {
     icon: <TbBrandFramerMotion className="size-6" />,
-    name: "Framer Motion",
-    description: "Animation"
+    nameKey: "stack_framer_motion_name",
+    descriptionKey: "stack_framer_motion_description",
   },
   {
     icon: <TbBrandDocker className="size-6" />,
-    name: "Docker",
-    description: "Containerization"
+    nameKey: "stack_docker_name",
+    descriptionKey: "stack_docker_description",
   },
   {
     icon: <BiLogoAws className="size-6" />,
-    name: "AWS",
-    description: "Cloud Services"
+    nameKey: "stack_aws_name",
+    descriptionKey: "stack_aws_description",
   },
   {
     icon: <LiaGit className="size-6" />,
-    name: "Git",
-    description: "Version Control"
+    nameKey: "stack_git_name",
+    descriptionKey: "stack_git_description",
   },
   {
     icon: <TbBrandGithub className="size-6" />,
-    name: "Github",
-    description: "Version Control"
+    nameKey: "stack_github_name",
+    descriptionKey: "stack_github_description",
   },
   {
     icon: <TbBrandVercel className="size-6" />,
-    name: "Vercel",
-    description: "Deployment"
+    nameKey: "stack_vercel_name",
+    descriptionKey: "stack_vercel_description",
   },
 ];
 
