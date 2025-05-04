@@ -15,10 +15,10 @@ const Toogle = ({ isHeader }: { isHeader: boolean }) => {
           <LuMoon className="size-6.5" />
         )}
       </button>
-      <p className={`${!isHeader && "hidden"}`}>
+      <p className={`${!isHeader && "hidden"} text-sm font-semibold `}>
         {
           theme === "dark" ? (
-            <span className="text-sm">Light Mode</span>
+            <span >Light Mode</span>
           ) : (
             <span>Dark Mode</span>
           )

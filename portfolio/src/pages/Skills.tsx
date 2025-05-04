@@ -9,15 +9,15 @@ const Skills = () => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
   };
 
   return (
@@ -51,8 +51,8 @@ const Skills = () => {
               {stack.icon}
             </motion.span>
             <motion.span className="flex flex-col items-start" variants={itemVariants}>
-              <motion.h2 className="text-md font-bold">{t(stack.nameKey)}</motion.h2>
-              <motion.p className="text-sm text-gray-500">{t(stack.descriptionKey)}</motion.p>
+              <motion.h2 className="text-sm font-bold">{t(stack.nameKey)}</motion.h2>
+              <motion.p className="text-xs text-gray-500">{t(stack.descriptionKey)}</motion.p>
             </motion.span>
           </motion.div>
         ))}
