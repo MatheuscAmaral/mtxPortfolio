@@ -65,17 +65,17 @@ const Contact = () => {
     >
       <div>
         <motion.h1
-          className="flex items-center gap-2 text-4xl font-bold mb-5"
+          className="flex items-center gap-2 text-2xl md:text-4xl font-bold mb-5"
           variants={itemVariants}
         >
           <p>{t('contact_title_contact')}</p>
           <p className="text-primary">{t('contact_title_me')}</p>
         </motion.h1>
-        <motion.p className="text-lg mb-5 text-start" variants={itemVariants}>
+        <motion.p className="text-sm md:text-lg mb-5 text-start text-primary" variants={itemVariants}>
           {t('contact_intro')}{' '}
           <label
             htmlFor="name"
-            className="text-primary underline hover:text-primary/80 cursor-pointer"
+            className="underline hover:text-primary/80 cursor-pointer"
           >
             {t('contact_cta')}
           </label>
@@ -87,7 +87,7 @@ const Contact = () => {
         onSubmit={sendEmail}
         className="flex flex-col gap-5 w-full"
       >
-        <motion.div variants={itemVariants} className="flex w-full gap-5">
+        <motion.div variants={itemVariants} className="flex flex-col md:flex-row w-full gap-5">
           <motion.div
             variants={itemVariants}
             className="flex flex-col gap-2 items-start pb-4 w-full"

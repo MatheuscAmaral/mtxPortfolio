@@ -33,50 +33,27 @@ const TypeWritter = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [
-    displayWord,
-    isDeleting,
-    words,
-    wordIndex,
-    typingSpeed,
-    deletingSpeed,
-    pauseDuration,
-  ]);
+  }, [displayWord, isDeleting, words, wordIndex, typingSpeed, deletingSpeed, pauseDuration]);
 
   return (
     <motion.h1
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-      className="
-        w-full            
-        flex             
-        flex-wrap        
-        gap-3.5          
-        items-center   
-        text-5xl       
-        font-semibold   
-        whitespace-normal
-        break-words      
-      "
+      className={
+        "w-full flex flex-wrap gap-3.5 items-center font-semibold text-3xl md:text-4xl xl:text-5xl " +
+        "whitespace-normal break-words transition-all duration-500 ease-out"
+      }
     >
       {prefix}
       <span
-        className="
-          relative
-          inline-flex    
-          items-center
-          gap-2
-          text-primary
-          border-b-2
-          border-current
-          font-bold
-          whitespace-nowrap 
-        "
+        className={
+          "relative inline-flex items-center gap-2 text-primary border-b-2 border-current font-bold whitespace-nowrap"
+        }
       >
         {displayWord}
         <motion.span
-          className="absolute -right-2 bottom- w-0.5 h-18 bg-current"
+          className="absolute right-0 bottom-0 w-[2px] h-full bg-current"
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

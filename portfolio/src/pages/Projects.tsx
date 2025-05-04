@@ -33,13 +33,13 @@ const Projects = () => {
     >
       <div>
         <motion.h1
-          className="flex items-center gap-2 text-4xl font-bold mb-5"
+          className="flex items-center gap-2 text-2xl md:text-4xl font-bold mb-5"
           variants={itemVariants}
         >
           <p>{t('projects_title_recent')}</p>
           <span className="text-primary">{t('projects_title_work')}</span>
         </motion.h1>
-        <motion.p className="text-lg mb-5" variants={itemVariants}>
+        <motion.p className="text-sm md:text-lg mb-5 text-primary" variants={itemVariants}>
           {t('projects_intro')}
         </motion.p>
       </div>
@@ -66,7 +66,7 @@ const Projects = () => {
                   <p>{firstWord}</p>
                   <p className="text-primary">{secondWord}</p>
                 </motion.span>
-                <motion.p className="text-md text-primary" variants={itemVariants}>
+                <motion.p className="text-sm md:text-md text-primary" variants={itemVariants}>
                   {t(project.descriptionKey)}
                 </motion.p>
 
@@ -111,7 +111,6 @@ const Projects = () => {
                 className="size-120 h-auto rounded-md"
                 variants={itemVariants}
                 initial={{ scale: 1 }}
-                whileHover={{ scale: 1.05, rotate: -2 }}
               />
             </motion.div>
           );

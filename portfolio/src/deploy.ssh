@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if ! command -v vercel &> /dev/null; then
+  echo "Vercel CLI não está instalado. Instalando agora..."
+  pnpm install -g vercel
+fi
+
+# Exibe a versão do Vercel CLI
+vercel --version
+
+# Faz login no Vercel (necessário apenas na primeira execução)
+echo "Fazendo login no Vercel..."
+vercel login
+
+# Executa o build do projeto
+echo "Executando o build do projeto..."
+pnpm install
+pnpm build
+
+# Faz o deploy para o ambiente de preview
+echo "Fazendo deploy para o ambiente de preview..."
+vercel --prebuilt
+
+# Faz o deploy para o ambiente de produção
+echo "Fazendo deploy para o ambiente de produção..."
+vercel --prod
+
+echo "Deploy concluído com sucesso!"

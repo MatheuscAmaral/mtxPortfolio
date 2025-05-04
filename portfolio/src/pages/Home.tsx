@@ -54,7 +54,7 @@ const Home = () => {
       />
 
       <motion.div className="flex flex-col gap-3 items-start" variants={itemVariants}>
-        <motion.p className="text-md text-start text-primary">
+        <motion.p className="text-sm md:text-lg text-start text-primary">
           {t('intro_paragraph_1')} <span className="text-primary">{t('full_stack_software_engineer')}</span> {t('intro_paragraph_2')}
         </motion.p>
       </motion.div>

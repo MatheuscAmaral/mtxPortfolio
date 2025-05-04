@@ -165,6 +165,6 @@ body.dark {
     @apply size-4;
   }
   .scroll-button {
-    @apply rounded-full border p-3 hover:bg-secondary fixed bottom-5 right-5 animate-bounce z-40;
+    @apply rounded-full border p-3 bg-background hover:bg-secondary fixed bottom-5 right-5 animate-bounce z-40;
   }
 }

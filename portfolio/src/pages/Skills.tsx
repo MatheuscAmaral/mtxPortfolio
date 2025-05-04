@@ -30,16 +30,16 @@ const Skills = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div className="flex flex-col items-start gap-2" variants={containerVariants}>
-        <motion.h1 className="flex items-center gap-2 text-4xl font-bold mb-5" variants={itemVariants}>
+        <motion.h1 className="flex items-center gap-2 text-2xl md:text-4xl font-bold mb-5" variants={itemVariants}>
           <p>{t('skills_title_technologies')}</p>
           <span className="text-primary">{t('skills_title_tools')}</span>
         </motion.h1>
-        <motion.p className="text-md text-start text-primary" variants={itemVariants}>
+        <motion.p className="text-sm md:text-lg text-start text-primary" variants={itemVariants}>
           {t('skills_intro')}
         </motion.p>
       </motion.div>
 
-      <motion.div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 w-full" variants={containerVariants}>
+      <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-full" variants={containerVariants}>
         {stacks.map((stack) => (
           <motion.div
             key={stack.nameKey}
